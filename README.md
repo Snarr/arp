@@ -1,11 +1,9 @@
-# Auto Refresh Plus (arp) [![Build Status](https://travis-ci.org/lomholdt/arp.svg?branch=master)](https://travis-ci.org/lomholdt/arp)
+# Auto Refresh Plus (arp) w/ Webhook Support!
 
-Auto Refresh Plus with all tracking and malware removed!
+I modified the original "arp" repo to now send a Webhook GET request to any URL of your desire.
+Use this to link the page monitor feature to services like IFTTT. This allows for unique connections like calling your phone once your query is found.
 
-# How to install
-
-**Chrome Web Store**
-Go to the [Chrome Web Store](https://chrome.google.com/webstore/detail/auto-refresh-plus/ohfjpkccecpdfkpmfocndhepolhljfhg) and add the extension
+# How to install 
 
 **Manually**
 From the Chrome extensions page, tick the "Developer mode" checkbox and then
