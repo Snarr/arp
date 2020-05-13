@@ -32,6 +32,8 @@ function save_options(){
 
 	localStorage['pmonitor'] = getId('pmonitor').checked
 
+	localStorage['url'] = getId('url').value;
+
 	if(getId('pagemr01').checked) {
 		localStorage['pmpattern'] = 'A';
 	} else {
@@ -72,6 +74,8 @@ function read_options(){
 	if(localStorage['default_time']) {
 		getId('default_time').value = localStorage['default_time'];
 	}
+	
+	getId('url').value = localStorage['url'];
 
  	getId('randomTime').checked  = (localStorage['random_time'] == 'true');
  	getId('autostart').checked  = (localStorage['autostart'] == 'true');

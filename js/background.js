@@ -318,6 +318,7 @@ chrome.notifications.onClosed.addListener(function (id) {
 });
 
 function show_notification(pmpattern, check_content, onclick) {
+	postWebhook();
 	var action = (pmpattern == 'B') ? 'Lost' : 'Found';
 	var time = /(..):(..)/.exec(new Date);       // The prettyprinted time.
 	var hour = time[1] % 12 || 12;               // The prettyprinted hour.
@@ -448,4 +449,10 @@ function reload_cancel(tabId, content_detect) {
 	} else {
 		chrome.browserAction.setBadgeText({text:"", tabId:tabId});
 	}
+}
+
+function postWebhook() {
+	fetch(localStorage['url']).then(r => r.text()).then(result => {
+		console.log(result);
+	})
 }
